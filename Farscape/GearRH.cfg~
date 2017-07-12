@@ -1,0 +1,71 @@
+PART
+{
+// Kerbal Space Program - Part Config
+
+// --- general parameters ---
+name = MNZFarscapeGearRH
+module = Part
+author = Mike_NZ
+
+// --- asset parameters ---
+MODEL
+{
+  model = Mike_NZ_Crafts/Farscape/WheelRH
+  scale = 1.0, 1.0, 1.0
+}
+
+scale = 1.0
+rescaleFactor = 1.0
+
+// --- node definitions ---
+node_attach = -0.0, 0.0, 0.0, 0, 0, -1
+node_stack_top = -0.0, 0.0, 0.0, 0, 0, -1, 1
+
+// --- FX definitions ---
+
+// --- Sound FX definition ---
+
+// --- editor parameters ---
+TechRequired = basicRocketry
+entryCost = 100
+cost = 1000
+category = Utility
+subcategory = 0
+title = Farscape RH Gear
+manufacturer = Nasa
+description = LH
+
+// attachment rules: stack, srfAttach, allowStack, allowSrfAttach, allowCollision
+attachRules = 1,0,1,1,0
+
+// --- standard part parameters ---
+
+mass = 0.2
+
+thermalMassModifier = 4.0
+//heatConductivity = 0.06
+emissiveConstant = 0.95
+dragModelType = default
+maximum_drag = 0.03
+minimum_drag = 0.0
+angularDrag = 0
+crashTolerance = 20
+breakingForce = 250
+breakingTorque = 250
+
+maxTemp = 5400
+
+explosionPotential = 0.1
+fuelCrossFeed = True
+PhysicsSignificance = 1
+bulkheadProfiles = srf
+
+
+
+	MODULE
+	{
+		name = ModuleLandingGear
+		BrakeTorque = 12
+		BrakeSpeed = 3
+	}
+}
